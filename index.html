@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlipGenius™ - Your Money-Finding Superpower</title>
+  <meta name="description" content="Turn your phone into a money detector. Point, scan, profit. Find hidden arbitrage opportunities in everyday items.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --money-green: #10b981;
+      --money-dark: #047857;
+      --money-light: #d1fae5;
+      --gold: #f59e0b;
+      --dark: #0f172a;
+      --light: #f8fafc;
+    }
+    body { font-family: 'DM Sans', sans-serif; }
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+    .money-gradient {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .money-bg-gradient {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    }
+    .scanner-line {
+      animation: scan 2s ease-in-out infinite;
+    }
+    @keyframes scan {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(100px); opacity: 0.5; }
+    }
+  </style>
+</head>
+<body class="bg-light text-slate-900 min-h-screen">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">💰</span>
+          <div>
+            <h1 class="text-xl font-bold font-display">FlipGenius™</h1>
+          </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#features" class="text-slate-600 hover:text-emerald-600 font-medium transition">Features</a>
+          <a href="#how-it-works" class="text-slate-600 hover:text-emerald-600 font-medium transition">How It Works</a>
+          <a href="#pricing" class="text-slate-600 hover:text-emerald-600 font-medium transition">Pricing</a>
+          <a href="https://flipgenius.pages.dev/" class="money-bg-gradient px-5 py-2 rounded-full font-semibold text-white hover:opacity-90 transition">Open App</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-emerald-50 pt-20">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%2310b981\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 border border-emerald-200 mb-8">
+        <span>⚡</span>
+        <span class="text-emerald-700 font-semibold">Your Money-Finding Superpower</span>
+      </div>
+      
+      <h2 class="text-5xl md:text-7xl font-bold font-display mb-6">
+        <span class="text-slate-900">Turn Your Phone Into a</span><br>
+        <span class="money-gradient">Money Detector</span>
+      </h2>
+      
+      <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10">
+        Point. Scan. Profit. FlipGenius™ instantly exposes hidden profits in everyday items. Join 50,000+ people finding thousands in extra income every month.
+      </p>
+      
+      <div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+        <a href="https://flipgenius.pages.dev/" class="money-bg-gradient px-8 py-4 rounded-full font-bold text-xl text-white hover:scale-105 transition transform shadow-lg shadow-emerald-500/25">
+          💰 Start Finding Money Now
+        </a>
+        <a href="#how-it-works" class="px-8 py-4 rounded-full font-bold text-xl border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 transition">
+          See How It Works
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-emerald-600">50K+</div>
+          <div class="text-slate-500">Money Finders</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-emerald-600">$500+</div>
+          <div class="text-slate-500">Avg Mo. Profit</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-emerald-600">3s</div>
+          <div class="text-slate-500">Analysis Speed</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-emerald-600">90%+</div>
+          <div class="text-slate-500">Accuracy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scanner Demo -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gradient-to-br from-emerald-900 to-slate-900 rounded-3xl p-8 md:p-12 text-white">
+        <div class="text-center mb-8">
+          <div class="text-4xl mb-4">🔍</div>
+          <h3 class="text-2xl font-bold">Magic Money Scanner</h3>
+          <p class="text-emerald-300">Upload photos to expose hidden arbitrage opportunities</p>
+        </div>
+        
+        <!-- Scanner Animation -->
+        <div class="relative bg-slate-800 rounded-2xl h-64 flex items-center justify-center overflow-hidden mb-8">
+          <div class="text-6xl opacity-30">📦</div>
+          <div class="absolute inset-0 scanner-line h-1 bg-emerald-400 shadow-lg shadow-emerald-400"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex justify-between text-sm text-slate-400">
+            <span>📷 Upload Item Photos</span>
+            <span>Up to 3 high-quality images for 90%+ accuracy</span>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <div class="inline-block px-4 py-2 rounded-full bg-slate-800 text-slate-300">
+            Today's Scans: 0/5
+          </div>
+          <p class="mt-4 text-emerald-400 font-semibold">Upgrade to FlipGenius Pro for Unlimited Scans →</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem/Solution -->
+  <section class="py-20 px-4 bg-emerald-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Problem -->
+        <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
+          <div class="text-4xl mb-4">😰</div>
+          <h3 class="text-xl font-bold text-red-600 mb-4">The Flippers' Struggle</h3>
+          <ul class="space-y-3 text-slate-600">
+            <li>✦ Spending hours researching each item</li>
+            <li>✦ Missing profitable arbitrage opportunities</li>
+            <li>✦ Unsure if asking price is fair</li>
+            <li>✦ Losing money on bad flips</li>
+          </ul>
+        </div>
+        
+        <!-- Solution -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="text-xl font-bold text-emerald-600 mb-4">FlipGenius Solution</h3>
+          <ul class="space-y-3 text-slate-600">
+            <li>✦ Instant analysis in 3 seconds</li>
+            <li>✦ 90%+ accuracy on profit predictions</li>
+            <li>✦ Market data from 20+ platforms</li>
+            <li>✦ Psychology-based negotiation scripts</li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-4 bg-white">
+="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold font-display mb-4">Why FlipGenius™ Works</h2>
+        <p class="text-xl text-slate-600">Proprietary RMAC technology analyzes 90+ hidden variables in 3 seconds</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-6 border border-emerald-100 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🧠</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Psychology Engine</h3>
+          <p class="text-slate-600">Instantly reads seller urgency and buyer desperation levels.</p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-6 border border-emerald-100 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">⏰</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Timing Codex</h3>
+          <p class="text-slate-600">Calculates seasonal demand spikes down to the week.</p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-6 border border-emerald-100 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Market Grid</h3>
+          <p class="text-slate-600">Cross-references real-time sales data from 20+ major platforms.</p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-6 border border-emerald-100 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Precision Pricing</h3>
+          <p class="text-slate-600">90%+ accuracy in predicting final closing sale prices.</p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-6 border border-emerald-100 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">💡</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Script Vault</h3>
+          <p class="text-slate-600">Psychology-based negotiation scripts that close deals fast.</p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-6 border border-emerald-100 hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Turbo Speed</h3>
+          <p class="text-slate-600">Analyzes items faster than a human can check a single site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-20 px-4 bg-slate-900 text-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold font-display mb-4">How It Works</h2>
+        <p class="text-xl text-slate-400">Three steps to finding hidden money</p>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full money-bg-gradient flex items-center justify-center text-white font-bold text-xl flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-xl font-bold text-emerald-400 mb-2">Snap a Photo</h3>
+            <p class="text-slate-300">Take a photo of any item you're considering flipping. Include the price tag or listing if possible.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full money-bg-gradient flex items-center justify-center text-white font-bold text-xl flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-xl font-bold text-emerald-400 mb-2">AI Analysis</h3>
+            <p class="text-slate-300">Our RMAC technology analyzes 90+ variables: market demand, seller psychology, timing, and platform data.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full money-bg-gradient flex items-center justify-center text-white font-bold text-xl flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-xl font-bold text-emerald-400 mb-2">Find the Profit</h3>
+            <p class="text-slate-300">Get instant profit estimates, recommended asking prices, and negotiation scripts to maximize your return.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4 bg-gradient-to-b from-white to-emerald-50">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="text-6xl mb-6">💰</div>
+      <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">Start Finding Money Today</h2>
+      <p class="text-xl text-slate-600 mb-10">
+        Join 50,000+ flippers who've discovered hidden profits with FlipGenius™.
+      </p>
+      <a href="https://flipgenius.pages.dev/" class="inline-block money-bg-gradient px-10 py-4 rounded-full font-bold text-xl text-white hover:scale-105 transition transform shadow-lg shadow-emerald-500/25">
+        🚀 Open FlipGenius Free
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto text-center text-slate-400">
+      <p class="font-bold text-white mb-2">FlipGenius™</p>
+      <p>© 2024 FlipGenius. All rights reserved. Patent Pending.</p>
+    </div>
+  </footer>
+</body>
+</html>
